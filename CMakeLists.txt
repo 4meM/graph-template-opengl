@@ -12,7 +12,17 @@ include_directories(glfw/include)
 # Including GLAD
 include_directories(glad/include)
 
-set(SOURCE_FILES main.cpp glad/src/glad.c)
+# Including GLM
+include_directories(glm)
+
+set(SOURCE_FILES src/main.cpp glad/src/glad.c
+        src/sphere.cpp
+        src/include/sphere.h
+        src/Molecule.cpp
+        src/include/Molecule.h
+        src/cilindro.cpp
+        src/include/cilindro.h
+)
 
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCE_FILES})
 
